@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Makine Öğrenmesi, E-Ticareti Nasıl Şekillendiriyor? </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+ * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: rgb(141,203,255);
+  font-family: cursive;
+}
+
+.ust {
+  padding: 50px;
+  text-align: center;
+  background: #00c000;
+  color: white;
+}
+
+.ust h1 {
+  font-size: 40px;
+}
+
+.menu {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.menu a {
+  float: left;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 16px;
+  color: white;
+}
+
+.acilan {
+  overflow: hidden;
+  float: left;
+}
+
+.acilan .ac {
+  border: none;
+  font-size: 16px;  
+  outline: none;
+  color: white;
+  font-family: inherit;
+  margin: 0;
+  padding: 14px 16px;
+  background-color: inherit;
+}
+
+.menu a:hover, .acilan:hover .ac {
+  background-color: red;
+}
+
+.acilan-alt {
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.acilan-alt a {
+  padding: 12px 16px;
+  text-decoration: none;
+  color: black;
+  display: block;
+  text-align: left;
+  float: none;
+}
+
+.acilan-alt a:hover {
+  background-color: #ddd;
+}
+
+.acilan:hover .acilan-alt {
+  display: block;
+}
+
+.govde {  
+  padding: 50px;
+}
+
+.footer{
+  background-color: #292c2f;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+ 
+  padding: 55px 50px 30px 100px;
+}
+ 
+.footer .footer-sol,
+.footer .footer-orta,
+.footer .footer-sag{
+  display: inline-block;
+  vertical-align: top;
+}
+ 
+.footer .footer-sol{
+  width: 40%;
+}
+ 
+.footer h3{
+  color:  #ffffff;
+  font: normal 26px 'Cookie', cursive;
+  margin: 0;
+}
+ 
+.footer .footer-linkler{
+  color:#949798;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+ 
+.footer .footer-linkler a{
+  display:inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color:inherit;
+}
+
+.footer .footer-orta{
+  width: 35%;
+}
+ 
+.footer .footer-orta p{
+  color:#949798;
+  text-decoration: none;
+}
+ 
+.footer .footer-right{
+  width: 20%;
+}
+
+.footer .footer-ikonlar{
+  margin-top: 25px;
+}
+
+ /*Media --->  https://www.w3schools.com/html/html_responsive.asp */
+@media (max-width: 880px) {
+  .footer{
+    font: bold 14px sans-serif;
+  }
+  .footer .footer-sol,
+  .footer .footer-orta,
+  .footer .footer-sag{
+    display: block;
+    margin-bottom: 40px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .ust img{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .govde {   
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .menu a {
+    float: none;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .ust img {
+    float: none;
+    width: 100%;
+  }
+}
+
+#yukari {
+  background-color: rgb(0,192,0);
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 12px;
+  position: fixed;
+  text-decoration: none;
+  bottom: 10px; 
+  right: 10px;
+}
+
+#yukari:hover {
+  background-color: red;
+  color: white;
+}
+
+</style>
+</head>
+<body>
+
+<div class="ust" id="top">
+  <img src="logo.png" alt="logo" />
+</div>
+
+<div class="menu">
+  <a href="index.html">Anasayfa</a>
+
+  <div class="acilan">
+    <button class="ac">Çalışmalarım 
+    </button>
+    <div class="acilan-alt">
+      <a href="testotomasyon.html" target="_blank">Test Değerlendirme Otomasyonu</a>
+      <a href="veri.html" target="_blank">Veri Bilimi ve Görselleştirme</a>
+      <a href="e-ticaret.html" target="_blank">Makine Öğrenmesi E-Ticareti Nasıl Şekillendiriyor?</a>
+    </div>
+  </div>
+  
+<div class="acilan">
+    <button class="ac">ML Algoritmaları
+    </button>
+    <div class="acilan-alt">
+      <a href="Makine.html" target="_blank">Makine Öğrenmesi</a>
+      <a href="Makine2.html" target="_blank">Algoritmalar - 1</a>
+      <a href="Makine3.html" target="_blank">Algoritmalar - 2</a>
+    </div>
+  </div>
+
+  <div class="acilan">
+    <button class="ac">Tanıtımlar 
+    </button>
+    <div class="acilan-alt">
+      <a href="video1.html" target="_blank">Kocaeli Üniversitesi - KOÜ</a>
+      <a href="video2.html" target="_blank">Bilişim Sistemleri Mühendisliği</a>
+      <a href="video3.html" target="_blank">Kaggle Nedir ?</a>
+    </div>
+  </div>
+
+  <div class="">
+    <a href="iletisim.html" target="_blank">İletişim</a>
+  </div>
+
+  <div class="acilan">
+    <a href="Yusuf_Cv.pdf" target="_blank">Hakkımda</a>
+  </div>
+</div>
+
+<div class="govde">
+    <center><h2>Makine Öğrenmesi E-Ticareti Nasıl Şekillendiriyor?</h2></center>
+
+    <br>
+    <h3>Makine Öğrenmesi Nedir?</h3>
+    <p>Makine Öğrenmesi, matematiksel ve istatistiksel işlemler ile veriler üzerinden çıkarımlar yaparak tahminlerde bulunan sistemlerin bilgisayarlar ile modellenmesidir.</p>
+
+    <h3>E-Ticaret Nedir?</h3>
+    <p>Elektronik ticaret ya da kısaca e-ticaret, 1995 yılından sonra İnternet kullanımının artmasıyla ortaya çıkan, ticaretin elektronik ortamda yapılması kavramıdır. Mal ve hizmetlerin üretim, tanıtım, satış, sigorta, dağıtım ve ödeme işlemlerinin bilgisayar ağları üzerinden yapılmasıdır.</p>
+
+    <br>
+    <hr>
+    <br>
+
+    <h3>1. Müşteri Bölümlendirme, Hizmetlerin Kişiselleştirilmesi ve Hedeflenen Kampanya</h3>
+    <ul>
+    <li>
+      Müşteri, mağazaya girdiğinde, bir satıcı müşteri ile ilgilenir. Müşterinin bir şüphesi, sorusu ve ya endişesi olduğunda, satış görevlisi derhal onu ele alır ve müşteriyi satın alma işlemi yapması için teşvik eder.
+    </li>
+    <li>
+      E-ticaret web sitelerinde bu lüks yoktur. Müşteriler genellikle bir deneyimden ziyade rahatlık için çevrimiçi alışveriş yaparlar. Genellikle akılda belirli bir ürün var. Kolayca bulurlarsa satın alabilirler.
+    </li>
+    <li>
+        Bu nedenle, çevrimdışı mağazaların aksine, çevrimiçi mağazalar satışları ve geliri artıracak optimize edilmiş bir müşteri deneyimi sunmak için sınırlı bir kapsam sunar.
+    </li>
+    <li>
+      Bir müşterinin mağazada olacağı gibi bir deneyim sağlamak için e-ticaret perakendecilerinin çok miktarda veri toplaması ve bunu anlaması gerekir. Makine öğrenmenin yardımcı olabileceği yer burasıdır. E-ticaret perakendecilerinin, potansiyel alıcıları gerçek kampanyalara dönüştürebilecek hedefli kampanyalar yürütmesine yardımcı olabilir.
+    </li>
+    </ul>
+
+    <br>
+    <hr>
+    <br>
+
+    <h3>2. Optimize Fiyatlandırma</h3>
+    <ul>
+      <li>Çevrimiçi alışveriş yapanlar genellikle fiyatı göz önünde bulundurur. Alışveriş yapanların, çeşitli e-ticaret platformlarındaki ürünlerin fiyatlarını en iyi teklifi bulmak için karşılaştırması nadir değildir.</li>
+      <li>E-ticaret şirketleri, dinamik fiyatlandırma uygulayarak çok başarılı oldular. Makine öğrenmesi aynı anda çeşitli faktörleri dikkate alarak fiyatları değiştirebilir ve yeniden ayarlayabilir.</li>
+      <li>Bu faktörler rakip fiyatlandırmasını, ürün talebini, haftanın gününü, günün saatini, müşteri türünü vb. içerir.</li>
+    </ul>
+    <br>
+    <hr>
+    <br>
+
+    <h3>3. Sahtekarlık Koruması</h3>
+      <li>E-ticaret şirketleri hileli faaliyetlere açıktır. E-ticaret perakendecileri çok dikkatli olmalıdır. İşletmelerin, özellikle de çevrimiçi olanların, kötü bir üne bağlı olarak, dükkanları kapatmaları nadir değildir.</li>
+      <li>Bu nedenle, işletmeler herhangi bir sahtekarlığı tespit etme ve önleme konusunda dikkat etmelidir. Makine öğrenimi, sahtekarlık faaliyetlerinin kapsamını önemli ölçüde ortadan kaldırabilir. Kapsamlı, tekrarlayan verilerin topaklanmalarını hızlı bir şekilde işleyebilir ve herhangi bir anomaliyi saptayarak sahte faaliyetleri engelleyebilir.</li>
+    </ul>
+    <br>
+    <hr>
+    <br>
+
+    <h3>4. Optimize Edilmiş Arama Sonuçları</h3>
+    <p> Python için geliştirilmiş, istatistiksel veri görselleştirme yapmak amacıyla optimize edilmiş bir kütüphanedir. matplotlib altyapısını kullanmaktadır ve pandas kütüphanesi ile çok iyi bir şekilde entegre olmuştur. </p>
+    <br>
+    <hr>
+    <br>
+
+    <h3>5. Ürün önerileri</h3>
+    <p>Plotly interaktif görseller oluşturmamıza yarayan açık kaynak kodlu d3.js üzerine inşa edilmiş bir kütüphanedir ve Matlab, R ve Python API’leri bulunmaktadır. Bu da demek oluyor ki Python kullanıcıları pandas dataframe içinde istedikleri veri manipülasyonlarını gerçekleştirip kolaylıkla interaktif görseller oluşturabilirler. </p>
+    <br>
+    <hr>
+    <br>
+
+    <h3>6. Müşteri desteği</h3>
+    <p>Plotly interaktif görseller oluşturmamıza yarayan açık kaynak kodlu d3.js üzerine inşa edilmiş bir kütüphanedir ve Matlab, R ve Python API’leri bulunmaktadır. Bu da demek oluyor ki Python kullanıcıları pandas dataframe içinde istedikleri veri manipülasyonlarını gerçekleştirip kolaylıkla interaktif görseller oluşturabilirler. </p>
+    <br>
+    <hr>
+    <br>
+
+        <h3>7. Talebi ve Arzı Yönetmek</h3>
+    <p>Plotly interaktif görseller oluşturmamıza yarayan açık kaynak kodlu d3.js üzerine inşa edilmiş bir kütüphanedir ve Matlab, R ve Python API’leri bulunmaktadır. Bu da demek oluyor ki Python kullanıcıları pandas dataframe içinde istedikleri veri manipülasyonlarını gerçekleştirip kolaylıkla interaktif görseller oluşturabilirler. </p>
+    <br>
+    <hr>
+    <br>
+
+        <h3>8. Omnichannel Marketing</h3>
+    <p>Plotly interaktif görseller oluşturmamıza yarayan açık kaynak kodlu d3.js üzerine inşa edilmiş bir kütüphanedir ve Matlab, R ve Python API’leri bulunmaktadır. Bu da demek oluyor ki Python kullanıcıları pandas dataframe içinde istedikleri veri manipülasyonlarını gerçekleştirip kolaylıkla interaktif görseller oluşturabilirler. </p>
+    <br>
+    <hr>
+    <br>
+
+        <h3>Sonuç</h3>
+    <p>Plotly interaktif görseller oluşturmamıza yarayan açık kaynak kodlu d3.js üzerine inşa edilmiş bir kütüphanedir ve Matlab, R ve Python API’leri bulunmaktadır. Bu da demek oluyor ki Python kullanıcıları pandas dataframe içinde istedikleri veri manipülasyonlarını gerçekleştirip kolaylıkla interaktif görseller oluşturabilirler. </p>
+
+</div>
+<br><br>
+
+<footer class="footer">
+    <div class="footer-sol">
+    <h3>Sayfalar</h3>
+    <p class="footer-linkler">
+      <a href="#">Anasayfa</a><br />
+      <a href="#">Çalışmalarım</a><br />
+      <a href="#">ML Algoritmaları</a><br />
+      <a href="#">Tanıtımlar</a><br />
+      <a href="#">İletişim</a><br />
+      <a href="#">Hakkımda</a>
+    </p>
+    </div>
+ 
+    <div class="footer-orta">
+      <h3>İletişim</h3>
+      <p>Yusuf Ulaş Dağ</p>
+      <p>Kocaeli, Türkiye</p>
+      <p>0553 760 4147</p>
+      <p>yusufulasdag@gmail.com</p>
+      <p>yusufulasd@gmail.com</p>
+    </div>
+ 
+    <div class="footer-sag">
+      <div class="footer-ikonlar">
+        <h3>Sosyal Medya</h3>
+          <a href="https://tr-tr.facebook.com/" target="_blank"><img src="facebook.png" alt="facebook" /></a>
+          <a href="https://twitter.com/login?lang=tr" target="_blank"><img src="twitter.png" alt="facebook" /></a>
+          <a href="https://github.com/" target="_blank"><img src="github.png" alt="facebook" /></a>
+          <a href="https://www.kaggle.com/bezmenulas" target="_blank"><img src="k_30px.png" alt="kaggle" /></a>
+      </div> 
+    </div>
+  <hr>
+    <p style="color: white;">&copy; 2019, tüm hakları saklıdır. </p>
+</footer>
+
+<div>
+  <a href="#top" id="yukari"> <img src="up_40px.png" alt="up" height="20px" width="20px" /> </a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Veri Bilimi ve Görselleştirme</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: rgb(141,203,255);
+  font-family: cursive;
+}
+
+.ust {
+  padding: 50px;
+  text-align: center;
+  background: #00c000;
+  color: white;
+}
+
+.ust h1 {
+  font-size: 40px;
+}
+
+.menu {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.menu a {
+  float: left;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 16px;
+  color: white;
+}
+
+.acilan {
+  overflow: hidden;
+  float: left;
+}
+
+.acilan .ac {
+  border: none;
+  font-size: 16px;  
+  outline: none;
+  color: white;
+  font-family: inherit;
+  margin: 0;
+  padding: 14px 16px;
+  background-color: inherit;
+}
+
+.menu a:hover, .acilan:hover .ac {
+  background-color: red;
+}
+
+.acilan-alt {
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.acilan-alt a {
+  padding: 12px 16px;
+  text-decoration: none;
+  color: black;
+  display: block;
+  text-align: left;
+  float: none;
+}
+
+.acilan-alt a:hover {
+  background-color: #ddd;
+}
+
+.acilan:hover .acilan-alt {
+  display: block;
+}
+
+.govde {  
+  padding: 50px;
+}
+
+.footer{
+  background-color: #292c2f;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+ 
+  padding: 55px 50px 30px 100px;
+}
+ 
+.footer .footer-sol,
+.footer .footer-orta,
+.footer .footer-sag{
+  display: inline-block;
+  vertical-align: top;
+}
+ 
+.footer .footer-sol{
+  width: 40%;
+}
+ 
+.footer h3{
+  color:  #ffffff;
+  font: normal 26px 'Cookie', cursive;
+  margin: 0;
+}
+ 
+.footer .footer-linkler{
+  color:#949798;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+ 
+.footer .footer-linkler a{
+  display:inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color:inherit;
+}
+
+.footer .footer-orta{
+  width: 35%;
+}
+ 
+.footer .footer-orta p{
+  color:#949798;
+  text-decoration: none;
+}
+ 
+.footer .footer-right{
+  width: 20%;
+}
+
+.footer .footer-ikonlar{
+  margin-top: 25px;
+}
+
+ /*Media --->  https://www.w3schools.com/html/html_responsive.asp */
+@media (max-width: 880px) {
+  .footer{
+    font: bold 14px sans-serif;
+  }
+  .footer .footer-sol,
+  .footer .footer-orta,
+  .footer .footer-sag{
+    display: block;
+    margin-bottom: 40px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .ust img{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .govde {   
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .menu a {
+    float: none;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .ust img {
+    float: none;
+    width: 100%;
+  }
+}
+#yukari {
+  background-color: rgb(0,192,0);
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 12px;
+  position: fixed;
+  text-decoration: none;
+  bottom: 10px; 
+  right: 10px;
+}
+#yukari:hover {
+  background-color: red;
+  color: white;
+}
+
+</style>
+</head>
+<body>
+
+<div class="ust" id="top">
+  <img src="logo.png" alt="logo" />
+</div>
+
+<div class="menu">
+  <a href="index.html">Anasayfa</a>
+
+  <div class="acilan">
+    <button class="ac">Çalışmalarım 
+    </button>
+    <div class="acilan-alt">
+      <a href="testotomasyon.html" target="_blank">Test Değerlendirme Otomasyonu</a>
+      <a href="veri.html" target="_blank">Veri Bilimi ve Görselleştirme</a>
+      <a href="e-ticaret.html" target="_blank">Makine Öğrenmesi E-Ticareti Nasıl Şekillendiriyor?</a>
+    </div>
+  </div>
+  
+<div class="acilan">
+    <button class="ac">ML Algoritmaları
+    </button>
+    <div class="acilan-alt">
+      <a href="Makine.html" target="_blank">Makine Öğrenmesi</a>
+      <a href="Makine2.html" target="_blank">Algoritmalar - 1</a>
+      <a href="Makine3.html" target="_blank">Algoritmalar - 2</a>
+    </div>
+  </div>
+
+  <div class="acilan">
+    <button class="ac">Tanıtımlar 
+    </button>
+    <div class="acilan-alt">
+      <a href="video1.html" target="_blank">Kocaeli Üniversitesi - KOÜ</a>
+      <a href="video2.html" target="_blank">Bilişim Sistemleri Mühendisliği</a>
+      <a href="video3.html" target="_blank">Kaggle Nedir ?</a>
+    </div>
+  </div>
+
+  <div class="">
+    <a href="iletisim.html" target="_blank">İletişim</a>
+  </div>
+
+  <div class="acilan">
+    <a href="Yusuf_Cv.pdf" target="_blank">Hakkımda</a>
+  </div>
+</div>
+
+
+<div class="govde">
+    <center><h2>Veri Bilimi ve Veri Görselleştirmesi</h2></center>
+    <h3>Veri Bilimi Nedir?</h3>
+    <p>Veri bilimi, karmaşık problemleri çözmek için hem yapılandırılmış hem de yapılandırılmamış veriyi, işe yarar/değerli bilgiye dönüştürmeye yarar. Veri bilimi; Alan Uzmanlığı, Programlama Becerileri, Matematik ve İstatistik bilgisi ve Kişisel Beceriler(analitik düşünme,problem çözme gibi yetenekler) gibi çeşitli alanlarını kullanarak verilerden anlamlı bilgi çıkarma işlemine Veri Bilimi diyebiliriz.</p>
+
+    <br>
+
+    <h3>Veri Görselleştirmesi Nedir?</h3>
+    <p>Veri Görselleştirmesi, verilerin, grafiksel çizelgeler, şekiller ve sütunlar aracılığıyla bilgilerin sunumudur. Doğru zamanda doğru kararları vermenize yardımcı olacak bir dizi içgörü sunar. Stratejik planlamalar yapmak için çok ihtiyaç duyulan bir araçtır. Aslında tam bir karar destek sistemi diyebiliriz.</p>
+    <br>
+
+    <h3>Kullandığım Kütüphaneler:</h3>
+    <ul>
+      <li>Numpy</li>
+      <li>Pandas</li>
+      <li>Matplotlib</li>
+      <li>Seaborn</li>
+      <li>Plotly</li>
+    </ul>
+    <br>
+
+    <h3>Kaggle</h3>
+    <p><a href="https://www.kaggle.com/bezmenulas" target="_blank">Kaggle</a> ile çalışmalarıma erişebilirsiniz.</p>
+    <hr>
+    <br>
+
+    <h3>Numpy</h3>
+    <p>NumPy (Numerical Python) bilimsel hesaplamaları hızlı bir şekilde yapmamızı sağlayan bir matematik kütüphanesidir. Numpy’ın temelini numpy dizileri oluşturur. Numpy dizileri python listelerine benzer fakat hız ve işlevsellik açısından python listelerinden daha kullanışlıdır.Ayrıca python listelerinden farklı olarak Numpy dizileri homojen yapıda olmalıdır yani dizi içindeki tüm elemanlar aynı veri tipinden olmalıdır.</p>
+    <center><img src="numpy.png" style="width:60%" ></center>
+    <br>
+    <hr>
+    <br>
+
+    <h3>Pandas</h3>
+    <p>Pandas, python programlama dili için yüksek performanslı, kullanımı kolay veri yapıları ve veri analizi araçları sağlayan açık kaynaklı, BSD lisanslı bir kütüphanedir.</p>
+    <ul>
+      <li>Düz dosyalardan (CSV ve ayrılmış) veri yükleme, Excel dosyaları, veritabanları ve ultra hızlı HDF5 formatındaki verileri kaydetme / yükleme için sağlam IO araçları</li>
+      <li>Verileri birleştirmek ve dönüştürmek için veri kümelerinde bölünmüş uygula-birleştirme işlemlerini gerçekleştiren işlevselliğe göre güçlü, esnek grup</li>
+      <li>Veri setlerinin esnek şekilde yeniden şekillendirilmesi ve döndürülmesi</li>
+      <li>Veri setlerinde yüksek performans birleştirme ve birleştirme</li>
+      <li>Diğer Python ve NumPy veri yapılarındaki düzensiz, farklı indeksli verilerin DataFrame nesnelerine dönüştürülmesini kolaylaştırır</li>
+      <li>Otomatik ve açık veri hizalama: nesneler açıkça bir etiket kümesine hizalanabilir veya kullanıcı etiketleri görmezden gelebilir ve Seri, DataFrame, vb. verileri hesaplamalarda sizin için otomatik olarak hizalayabilir.</li>
+    </ul>
+    <center><img src="pandas.png" style="width:60%" ></center>
+    <br>
+    <hr>
+    <br>
+
+    <h3>Matplotlib</h3>
+    <p>Matplotlib grafik çizim paketi Python’la bilimsel programlamanın en önemli araçlarından birisidir. Çok kuvvetli bir paket olan Matplotlib ile verileri etkileşimli olarak görselleştirebilir, yayınlamaya uygun yüksek kalitede çıktılar hazırlayabiliriz. Hem iki boyutlu hem de üç boyutlu grafikler üretilebilir. </p>
+    <br><br>
+    <center><img src="matplotlib.png" style="width:60%" ></center>
+    <br>
+    <hr>
+    <br>
+
+    <h3>Seaborn</h3>
+    <p> Python için geliştirilmiş, istatistiksel veri görselleştirme yapmak amacıyla optimize edilmiş bir kütüphanedir. matplotlib altyapısını kullanmaktadır ve pandas kütüphanesi ile çok iyi bir şekilde entegre olmuştur. </p>
+    <br><br>
+    <center><img src="seaborn.png" style="width:55%" ></center>
+    <br>
+    <hr>
+    <br>
+
+    <h3>Plotly</h3>
+    <p>Plotly interaktif görseller oluşturmamıza yarayan açık kaynak kodlu d3.js üzerine inşa edilmiş bir kütüphanedir ve Matlab, R ve Python API’leri bulunmaktadır. Bu da demek oluyor ki Python kullanıcıları pandas dataframe içinde istedikleri veri manipülasyonlarını gerçekleştirip kolaylıkla interaktif görseller oluşturabilirler. </p>
+    <center><img src="plotly.png" style="width:80%" ></center>
+</div>
+
+
+<br><br>
+<footer class="footer">
+
+    <div class="footer-sol">
+    <h3>Sayfalar</h3>
+    <p class="footer-linkler">
+      <a href="#">Anasayfa</a><br />
+      <a href="#">Çalışmalarım</a><br />
+      <a href="#">ML Algoritmaları</a><br />
+      <a href="#">Tanıtımlar</a><br />
+      <a href="#">İletişim</a><br />
+      <a href="#">Hakkımda</a>
+    </p>
+    </div>
+ 
+    <div class="footer-orta">
+      <h3>İletişim</h3>
+      <p>Yusuf Ulaş Dağ</p>
+      <p>Kocaeli, Türkiye</p>
+      <p>0553 760 4147</p>
+      <p>yusufulasdag@gmail.com</p>
+      <p>yusufulasd@gmail.com</p>
+    </div>
+ 
+    <div class="footer-sag">
+      <div class="footer-ikonlar">
+        <h3>Sosyal Medya</h3>
+          <a href="https://tr-tr.facebook.com/" target="_blank"><img src="facebook.png" alt="facebook" /></a>
+          <a href="https://twitter.com/login?lang=tr" target="_blank"><img src="twitter.png" alt="facebook" /></a>
+          <a href="https://github.com/" target="_blank"><img src="github.png" alt="facebook" /></a>
+          <a href="https://www.kaggle.com/bezmenulas" target="_blank"><img src="k_30px.png" alt="kaggle" /></a>
+      </div> 
+    </div>
+  <hr>
+    <p style="color: white;">&copy; 2019, tüm hakları saklıdır. </p>
+</footer>
+
+<div>
+  <a href="#top" id="yukari"> <img src="up_40px.png" alt="up" height="20px" width="20px" /> </a>
+</div>
+
+</body>
+</html>

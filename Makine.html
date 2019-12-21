@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Makine Öğrenmesi</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: rgb(141,203,255);
+  font-family: cursive;
+}
+
+.ust {
+  padding: 50px;
+  text-align: center;
+  background: #00c000;
+  color: white;
+}
+
+.ust h1 {
+  font-size: 40px;
+}
+
+.menu {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.menu a {
+  float: left;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 16px;
+  color: white;
+}
+
+.acilan {
+  overflow: hidden;
+  float: left;
+}
+
+.acilan .ac {
+  border: none;
+  font-size: 16px;  
+  outline: none;
+  color: white;
+  font-family: inherit;
+  margin: 0;
+  padding: 14px 16px;
+  background-color: inherit;
+}
+
+.menu a:hover, .acilan:hover .ac {
+  background-color: red;
+}
+
+.acilan-alt {
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.acilan-alt a {
+  padding: 12px 16px;
+  text-decoration: none;
+  color: black;
+  display: block;
+  text-align: left;
+  float: none;
+}
+
+.acilan-alt a:hover {
+  background-color: #ddd;
+}
+
+.acilan:hover .acilan-alt {
+  display: block;
+}
+
+.govde {  
+  padding: 50px;
+}
+
+.footer{
+  background-color: #292c2f;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+ 
+  padding: 55px 50px 30px 100px;
+}
+ 
+.footer .footer-sol,
+.footer .footer-orta,
+.footer .footer-sag{
+  display: inline-block;
+  vertical-align: top;
+}
+ 
+.footer .footer-sol{
+  width: 40%;
+}
+ 
+.footer h3{
+  color:  #ffffff;
+  font: normal 26px 'Cookie', cursive;
+  margin: 0;
+}
+ 
+.footer .footer-linkler{
+  color:#949798;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+ 
+.footer .footer-linkler a{
+  display:inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color:inherit;
+}
+
+.footer .footer-orta{
+  width: 35%;
+}
+ 
+.footer .footer-orta p{
+  color:#949798;
+  text-decoration: none;
+}
+ 
+.footer .footer-right{
+  width: 20%;
+}
+
+.footer .footer-ikonlar{
+  margin-top: 25px;
+}
+
+ /*Media --->  https://www.w3schools.com/html/html_responsive.asp */
+@media (max-width: 880px) {
+  .footer{
+    font: bold 14px sans-serif;
+  }
+  .footer .footer-sol,
+  .footer .footer-orta,
+  .footer .footer-sag{
+    display: block;
+    margin-bottom: 40px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .ust img{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .govde {   
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .menu a {
+    float: none;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .ust img {
+    float: none;
+    width: 100%;
+  }
+}
+#yukari {
+  background-color: rgb(0,192,0);
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 12px;
+  position: fixed;
+  text-decoration: none;
+  bottom: 10px; 
+  right: 10px;
+}
+#yukari:hover {
+  background-color: red;
+  color: white;
+}
+
+</style>
+</head>
+<body>
+
+<div class="ust" id="top">
+  <img src="logo.png" alt="logo" />
+</div>
+
+<div class="menu">
+  <a href="index.html">Anasayfa</a>
+
+  <div class="acilan">
+    <button class="ac">Çalışmalarım 
+    </button>
+    <div class="acilan-alt">
+      <a href="testotomasyon.html" target="_blank">Test Değerlendirme Otomasyonu</a>
+      <a href="veri.html" target="_blank">Veri Bilimi ve Görselleştirme</a>
+      <a href="e-ticaret.html" target="_blank">Makine Öğrenmesi E-Ticareti Nasıl Şekillendiriyor?</a>
+    </div>
+  </div>
+  
+<div class="acilan">
+    <button class="ac">ML Algoritmaları
+    </button>
+    <div class="acilan-alt">
+      <a href="Makine.html" target="_blank">Makine Öğrenmesi</a>
+      <a href="Makine2.html" target="_blank">Algoritmalar - 1</a>
+      <a href="Makine3.html" target="_blank">Algoritmalar - 2</a>
+    </div>
+  </div>
+
+  <div class="acilan">
+    <button class="ac">Tanıtımlar 
+    </button>
+    <div class="acilan-alt">
+      <a href="video1.html" target="_blank">Kocaeli Üniversitesi - KOÜ</a>
+      <a href="video2.html" target="_blank">Bilişim Sistemleri Mühendisliği</a>
+      <a href="video3.html" target="_blank">Kaggle Nedir ?</a>
+    </div>
+  </div>
+
+  <div class="">
+    <a href="iletisim.html" target="_blank">İletişim</a>
+  </div>
+
+  <div class="acilan">
+    <a href="Yusuf_Cv.pdf" target="_blank">Hakkımda</a>
+  </div>
+</div>
+
+<div class="govde">
+    <center><h2>Makine Öğrenmesi</h2></center>
+    <p>Makine öğrenmesi terimi genellikle yapay zekâ ile karıştırılan yanlış bir terimdir, ancak makine öğrenmesi aslında bir AI alanı / alt tipidir. Makine öğrenmesi ayrıca sıklıkla tahmine dayalı analitik veya tahmine dayalı modelleme olarak da adlandırılır.
+
+Tarihçesi: Amerikan bilgisayar bilimcisi Arthur Samuel tarafından 1959‘da bir araya getirilen “makine öğrenmesi” terimi, “bilgisayarın açıkça programlanmadan öğrenme yeteneği” olarak tanımlanmaktadır.
+
+En temelde makine öğrenmesi; çıktı değerlerini kabul edilebilir bir aralıkta tahmin etmek için girdi verilerini alan ve analiz eden programlanmış algoritmalar kullanır. Bu algoritmalara yeni veriler gönderilirken, performansı iyileştirmek ve zamanla ‘zekâ‘ geliştirmek için operasyonları öğrenir ve optimize ederler.</p>
+
+    <p>Dört tür makine öğrenme algoritması vardır: denetlenen, yarı denetlenen, denetlenmeyen ve güçlendirme.</p>
+    <br>
+    <hr>
+    <br>
+
+    <h3>Denetimli Makine Öğrenmesi</h3>
+    <p>Denetimli öğrenmede, makine örnek olarak öğretilir. Operatör, makine öğrenme algoritmasını, istenen giriş ve çıkışları içeren bilinen bir veri kümesi ile sağlar ve algoritma, bu giriş ve çıkışlara nasıl ulaşılacağını belirleyen bir yöntem bulmaktadır.</p><p>
+
+Operatör, sorunun doğru cevaplarını bilmesine rağmen, algoritma verideki kalıpları tanımlar, gözlemleri öğrenir ve tahminlerde bulunur. Algoritma tahminlerde bulunur ve operatör tarafından düzeltilir. Bu işlem algoritma yüksek düzeyde bir doğruluk / performans elde edene kadar devam eder.</p>
+<p>
+Denetimli öğrenmenin şemsiyesi altında: Sınıflandırma, Regresyon ve Tahmin.
+</p><p>
+Sınıflandırma: Sınıflandırma görevlerinde, makine öğrenme programı gözlemlenen değerlerden bir sonuç çıkarmalı ve yeni gözlemlerin hangi kategoriye ait olduğunu belirlemelidir. Örneğin, e-postaları “spam” veya “spam değil” olarak filtrelerken, programın mevcut gözlemsel verilere bakması ve e-postaları buna göre filtrelemesi gerekmektedir.
+</p><p>
+<b>Regresyon:</b> Regresyon görevlerinde, makine öğrenme programı değişkenler arasındaki ilişkileri tahmin etmeli ve anlamalıdır. Regresyon analizi, bir bağımlı değişkene ve bir dizi başka değişkene odaklanır. Bu, özellikle tahmin için faydalıdır.
+</p><p>
+<b>Tahmin:</b> Tahmin, geçmiş ve şimdiki verilere dayanarak gelecekle ilgili tahminler yapma sürecidir ve genellikle eğilimleri analiz etmek için kullanılır. </p>
+    <br>
+    <hr>
+    <br>
+
+    <h3>Yarı Denetimli Makine Öğrenmesi</h3>
+    <p>Yarı denetimli makine öğrenmesi, denetimli öğrenmeye benzer, ancak bunun yerine hem etiketli hem de etiketsiz verileri kullanmaktadır. Etiketli veriler esasen anlamlı etiketlere sahip bilgilerdir, böylece etiketlenmemiş veriler bu bilgiden yoksundur ve algoritma verileri anlayabilmektedir. Bu kombinasyonu kullanarak, makine öğrenme algoritmaları etiketlenmemiş verileri etiketlemeyi öğrenebilir.</p>
+    <br>
+    <hr>
+    <br>
+
+    <h3>Denetimsiz Makine Öğrenmesi</h3>
+    <p>Burada, makine öğrenme algoritması kalıpları tanımlamak için verileri inceler. Talimat verecek bir cevap anahtarı veya insan operatörü yoktur. Bunun yerine, makine mevcut verileri analiz ederek korelasyonları ve ilişkileri belirlemektedir. Denetimsiz bir öğrenme sürecinde, büyük veri setlerini yorumlamak ve bu verileri buna göre ele almak için makine öğrenme algoritması bırakılmıştır. Algoritma, bu verileri yapısını tanımlamak için bir şekilde düzenlemeye çalışmaktadır. Bu, verilerin kümeler halinde gruplandırılması veya daha düzenli görünecek şekilde düzenlenmesi anlamına gelebilmektedir.
+</p><p>
+Daha fazla veriyi değerlendirdikçe, bu verilerle ilgili kararlar verebilme becerisi giderek artmakta ve daha rafine olmaktadır.</p><p>
+  <b>Kümeleme:</b> Kümeleme, benzer verilerin (tanımlanmış kriterlere göre) gruplandırılmasını içerir. Verileri birkaç gruba ayırmak ve kalıpları bulmak için her veri kümesinde analiz yapmak faydalıdır.</p>
+<p>
+<b>Boyut küçültme:</b> Boyut küçültme, gereken kesin bilgiyi bulmak için düşünülen değişken sayısını azaltır.</p>
+    <br>
+    <hr>
+    <br>
+
+    <h3>Takviyeli Makine Öğrenmesi</h3>
+    <p>Takviye öğrenme, bir makine öğrenmesi algoritmasına bir dizi eylem, parametre ve son değer içeren, düzenli öğrenme süreçlerine odaklanmaktadır. Kuralları belirleyerek, makine öğrenme algoritması farklı seçenekleri ve olasılıkları keşfetmeye çalışır, hangisinin en uygun olduğunu belirlemek için her bir sonucu izleyerek ve değerlendirmektedir.</p><p>
+
+Takviyeli makine öğrenmesi; makine denemesini ve hatayı öğretir. Geçmiş deneyimlerden öğrenir ve mümkün olan en iyi sonucu elde etmek için duruma cevap olarak yaklaşımını adapte etmeye başlar. </p>
+    <br>
+</div>
+</div>
+
+<br><br>
+<footer class="footer">
+
+    <div class="footer-sol">
+    <h3>Sayfalar</h3>
+    <p class="footer-linkler">
+      <a href="#">Anasayfa</a><br />
+      <a href="#">Çalışmalarım</a><br />
+      <a href="#">ML Algoritmaları</a><br />
+      <a href="#">Tanıtımlar</a><br />
+      <a href="#">İletişim</a><br />
+      <a href="#">Hakkımda</a>
+    </p>
+    </div>
+ 
+    <div class="footer-orta">
+      <h3>İletişim</h3>
+      <p>Yusuf Ulaş Dağ</p>
+      <p>Kocaeli, Türkiye</p>
+      <p>0553 760 4147</p>
+      <p>yusufulasdag@gmail.com</p>
+      <p>yusufulasd@gmail.com</p>
+    </div>
+ 
+    <div class="footer-sag">
+      <div class="footer-ikonlar">
+        <h3>Sosyal Medya</h3>
+          <a href="https://tr-tr.facebook.com/" target="_blank"><img src="facebook.png" alt="facebook" /></a>
+          <a href="https://twitter.com/login?lang=tr" target="_blank"><img src="twitter.png" alt="facebook" /></a>
+          <a href="https://github.com/" target="_blank"><img src="github.png" alt="facebook" /></a>
+          <a href="https://www.kaggle.com/bezmenulas" target="_blank"><img src="k_30px.png" alt="kaggle" /></a>
+      </div> 
+    </div>
+  <hr>
+    <p style="color: white;">&copy; 2019, tüm hakları saklıdır. </p>
+</footer>
+
+<div>
+  <a href="#top" id="yukari"> <img src="up_40px.png" alt="up" height="20px" width="20px" /> </a>
+</div>
+
+</body>
+</html>

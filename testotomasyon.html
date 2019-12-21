@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Test Değerlendirme Otomasyon</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: rgb(141,203,255);
+  font-family: cursive;
+}
+
+.ust {
+  padding: 50px;
+  text-align: center;
+  background: #00c000;
+  color: white;
+}
+
+.ust h1 {
+  font-size: 40px;
+}
+
+.menu {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.menu a {
+  float: left;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 16px;
+  color: white;
+}
+
+.acilan {
+  overflow: hidden;
+  float: left;
+}
+
+.acilan .ac {
+  border: none;
+  font-size: 16px;  
+  outline: none;
+  color: white;
+  font-family: inherit;
+  margin: 0;
+  padding: 14px 16px;
+  background-color: inherit;
+}
+
+.menu a:hover, .acilan:hover .ac {
+  background-color: red;
+}
+
+.acilan-alt {
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.acilan-alt a {
+  padding: 12px 16px;
+  text-decoration: none;
+  color: black;
+  display: block;
+  text-align: left;
+  float: none;
+}
+
+.acilan-alt a:hover {
+  background-color: #ddd;
+}
+
+.acilan:hover .acilan-alt {
+  display: block;
+}
+
+.govde {  
+  padding: 50px;
+}
+
+.footer{
+  background-color: #292c2f;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+ 
+  padding: 55px 50px 30px 100px;
+}
+ 
+.footer .footer-sol,
+.footer .footer-orta,
+.footer .footer-sag{
+  display: inline-block;
+  vertical-align: top;
+}
+ 
+.footer .footer-sol{
+  width: 40%;
+}
+ 
+.footer h3{
+  color:  #ffffff;
+  font: normal 26px 'Cookie', cursive;
+  margin: 0;
+}
+ 
+.footer .footer-linkler{
+  color:#949798;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+ 
+.footer .footer-linkler a{
+  display:inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color:inherit;
+}
+
+.footer .footer-orta{
+  width: 35%;
+}
+ 
+.footer .footer-orta p{
+  color:#949798;
+  text-decoration: none;
+}
+ 
+.footer .footer-right{
+  width: 20%;
+}
+
+.footer .footer-ikonlar{
+  margin-top: 25px;
+}
+
+ /*Media --->  https://www.w3schools.com/html/html_responsive.asp */
+@media (max-width: 880px) {
+  .footer{
+    font: bold 14px sans-serif;
+  }
+  .footer .footer-sol,
+  .footer .footer-orta,
+  .footer .footer-sag{
+    display: block;
+    margin-bottom: 40px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .ust img{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .govde {   
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .menu a {
+    float: none;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .ust img {
+    float: none;
+    width: 100%;
+  }
+}
+#yukari {
+  background-color: rgb(0,192,0);
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 12px;
+  position: fixed;
+  text-decoration: none;
+  bottom: 10px; 
+  right: 10px;
+}
+#yukari:hover {
+  background-color: red;
+  color: white;
+}
+
+</style>
+</head>
+<body>
+
+<div class="ust" id="top">
+  <img src="logo.png" alt="logo" />
+</div>
+
+<div class="menu">
+  <a href="index.html">Anasayfa</a>
+
+  <div class="acilan">
+    <button class="ac">Çalışmalarım 
+    </button>
+    <div class="acilan-alt">
+      <a href="testotomasyon.html" target="_blank">Test Değerlendirme Otomasyonu</a>
+      <a href="veri.html" target="_blank">Veri Bilimi ve Görselleştirme</a>
+      <a href="e-ticaret.html" target="_blank">Makine Öğrenmesi E-Ticareti Nasıl Şekillendiriyor?</a>
+    </div>
+  </div>
+  
+<div class="acilan">
+    <button class="ac">ML Algoritmaları
+    </button>
+    <div class="acilan-alt">
+      <a href="Makine.html" target="_blank">Makine Öğrenmesi</a>
+      <a href="Makine2.html" target="_blank">Algoritmalar - 1</a>
+      <a href="Makine3.html" target="_blank">Algoritmalar - 2</a>
+    </div>
+  </div>
+
+  <div class="acilan">
+    <button class="ac">Tanıtımlar 
+    </button>
+    <div class="acilan-alt">
+      <a href="video1.html" target="_blank">Kocaeli Üniversitesi - KOÜ</a>
+      <a href="video2.html" target="_blank">Bilişim Sistemleri Mühendisliği</a>
+      <a href="video3.html" target="_blank">Kaggle Nedir ?</a>
+    </div>
+  </div>
+
+  <div class="">
+    <a href="iletisim.html" target="_blank">İletişim</a>
+  </div>
+
+  <div class="acilan">
+    <a href="Yusuf_Cv.pdf" target="_blank">Hakkımda</a>
+  </div>
+</div>
+
+
+<div class="govde">
+    <center><h2>Test Sınavı Değerlendirme Otomasyonu</h2></center>
+    <p>Çoğunlukla Öğretim Görevlilerinin işlerininin yönetimini sağlamak ve çalışmalarını kolaylaştırmak üzerine bir test sınavı değerlendirme otomasyonu geliştirdik.  Kullanıcılar programımız sayesinde tutulması gereken bilgileri veritabanında saklayabilecek,yapılması gereken işlemleri oluşturduğumuz kullanıcı dostu arayüzümüz sayesinde kolayca halledebilecektir.</p>
+
+    <p>Projenin geliştirilme amacı,hitap ettiği kesim çoğunlukla öğretim görevlileri olan bir yapı da öğrenci not bilgileri,sınıf ortalaması gibi bilgilerin ortak bir sistemde saklanması ve verilerin güvenilir bir şekilde saklanmasıdır. Burada arayüz ile altyapı(veritabanı) arasındaki ilişkiyi kurabilmek projenin en önemli kısımlarından birini oluşturuyor.Program farklı bilgisayarlarda kullanılsa da tek bir veritabanına bağlanması veri bütünlüğü açışından önem arz etmektedir. </p>
+    <br>
+    <hr>
+    <br>
+
+    <h3>Ana Sayfa</h3>
+    <p>Otomasyona giriş yapan kullanıcıyı karşılayan menü ekranıdır. Kullanıcı bu ekrandan uygulamanın işlevlerine erişebilir. </p>
+    <p>Kullanıcının not işlemlerinin yapıldığı formdur.Gerekli bilgilerin olduğu excel dosyasını  ve cevap anahtarını yükleyerek öğrencilerin notlarını değerlendirebilir ve hesaplayabilir. </p>
+    <center><img src="anasayfa.png" style="width:80%" ></center>
+    <br>
+    <hr>
+    <br>
+
+    <h3>Kullanıcı İşlemleri</h3>
+    <p>Kullanıcının programda kullanıcı silme,güncelleme ve ekleme gibi işlemleri yapabilmesine imkan veren penceredir.</p>
+    <center><img src="kullaniciislem.png" style="width:80%" ></center>
+    <br>
+    <hr>
+    <br>
+
+    <h3>Fakülte-Bölüm İşlemleri</h3>
+    <p>Hangi fakültenin hangi bölüme ait olduğu gibi eşleştirmelerin ve bölüm kazanımlarının eklendiği penceredir. </p>
+    <center><img src="fakultebolum.png" style="width:80%" ></center>
+    <br>
+    <hr>
+    <br>
+
+    <h3>Ders İşlemleri</h3>
+    <p>Kullanıcının Ders bilgilerini ekleyebildiği,silebildiği ve güncelleyebildiği penceredir.Aynı zamanda her derse ait “Ders Kazanımları” bilgileri bu sayfada düzenlenir. </p>
+    <center><img src="dersislem.png" style="width:80%" ></center>
+    <br>
+    <hr>
+    <br>
+
+    <h3>Ders Atama İşlemleri</h3>
+    <p>Kullanıcının ilgili bölüme ilgili öğretim görevlisinin atamalarının yapıldığı penceredir. </p>
+    <center><img src="dersatama.png" style="width:80%" ></center>
+    <br>
+    <hr>
+    <br>
+    
+    <h3>Dönem İşlemleri</h3>
+    <p>Kullanıcının dönem bilgilerini düzenleyebildiği penceredir.</p>
+    <center><img src="donemislem.png" style="width:80%" ></center>
+    <br>
+    <hr>
+    <br>
+
+    <h3>Sınav İşlemleri</h3>
+    <p>Kullanıcının öğrencilerin sınav bilgilerini görüntüleyebileceği penceredir. </p>
+    <center><img src="sinavlar.png" style="width:80%" ></center>
+</div>
+</div>
+
+
+<br><br>
+<footer class="footer">
+
+    <div class="footer-sol">
+    <h3>Sayfalar</h3>
+    <p class="footer-linkler">
+      <a href="#">Anasayfa</a><br />
+      <a href="#">Çalışmalarım</a><br />
+      <a href="#">ML Algoritmaları</a><br />
+      <a href="#">Tanıtımlar</a><br />
+      <a href="#">İletişim</a><br />
+      <a href="#">Hakkımda</a>
+    </p>
+    </div>
+ 
+    <div class="footer-orta">
+      <h3>İletişim</h3>
+      <p>Yusuf Ulaş Dağ</p>
+      <p>Kocaeli, Türkiye</p>
+      <p>0553 760 4147</p>
+      <p>yusufulasdag@gmail.com</p>
+      <p>yusufulasd@gmail.com</p>
+    </div>
+ 
+    <div class="footer-sag">
+      <div class="footer-ikonlar">
+        <h3>Sosyal Medya</h3>
+          <a href="https://tr-tr.facebook.com/" target="_blank"><img src="facebook.png" alt="facebook" /></a>
+          <a href="https://twitter.com/login?lang=tr" target="_blank"><img src="twitter.png" alt="facebook" /></a>
+          <a href="https://github.com/" target="_blank"><img src="github.png" alt="facebook" /></a>
+          <a href="https://www.kaggle.com/bezmenulas" target="_blank"><img src="k_30px.png" alt="kaggle" /></a>
+      </div> 
+    </div>
+  <hr>
+    <p style="color: white;">&copy; 2019, tüm hakları saklıdır. </p>
+</footer>
+
+<div>
+  <a href="#top" id="yukari"> <img src="up_40px.png" alt="up" height="20px" width="20px" /> </a>
+</div>
+
+</body>
+</html>

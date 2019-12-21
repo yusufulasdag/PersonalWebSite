@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Yusuf Ulaş Dağ</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: rgb(141,203,255);
+  font-family: cursive;
+}
+
+.ust {
+  padding: 50px;
+  text-align: center;
+  background: #00c000;
+  color: white;
+}
+
+.ust h1 {
+  font-size: 40px;
+}
+
+.menu {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.menu a {
+  float: left;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 16px;
+  color: white;
+}
+
+.acilan {
+  overflow: hidden;
+  float: left;
+}
+
+.acilan .ac {
+  border: none;
+  font-size: 16px;  
+  outline: none;
+  color: white;
+  font-family: inherit;
+  margin: 0;
+  padding: 14px 16px;
+  background-color: inherit;
+}
+
+.menu a:hover, .acilan:hover .ac {
+  background-color: red;
+}
+
+.acilan-alt {
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.acilan-alt a {
+  padding: 12px 16px;
+  text-decoration: none;
+  color: black;
+  display: block;
+  text-align: left;
+  float: none;
+}
+
+.acilan-alt a:hover {
+  background-color: #ddd;
+}
+
+.acilan:hover .acilan-alt {
+  display: block;
+}
+
+.govde {  
+  display: flex;
+}
+
+.yan {
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+  background-color: rgb(76,150,215);
+}
+
+.ana {   
+  flex: 70%;
+  padding: 20px;
+  background-color: rgb(141,203,255);
+}
+
+.footer{
+  background-color: #292c2f;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+ 
+  padding: 55px 50px 30px 100px;
+}
+ 
+.footer .footer-sol,
+.footer .footer-orta,
+.footer .footer-sag{
+  display: inline-block;
+  vertical-align: top;
+}
+ 
+.footer .footer-sol{
+  width: 40%;
+}
+ 
+.footer h3{
+  color:  #ffffff;
+  font: normal 26px 'Cookie', cursive;
+  margin: 0;
+}
+ 
+.footer .footer-linkler{
+  color:#949798;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+ 
+.footer .footer-linkler a{
+  display:inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color:inherit;
+}
+
+.footer .footer-orta{
+  width: 35%;
+}
+ 
+.footer .footer-orta p{
+  color:#949798;
+  text-decoration: none;
+}
+ 
+.footer .footer-right{
+  width: 20%;
+}
+
+.footer .footer-ikonlar{
+  margin-top: 25px;
+}
+
+ /*Media --->  https://www.w3schools.com/html/html_responsive.asp */
+@media (max-width: 880px) {
+  .footer{
+    font: bold 14px sans-serif;
+  }
+  .footer .footer-sol,
+  .footer .footer-orta,
+  .footer .footer-sag{
+    display: block;
+    margin-bottom: 40px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .ust img{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .govde {   
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .menu a {
+    float: none;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .ust img {
+    float: none;
+    width: 100%;
+  }
+}
+
+/* https://www.w3schools.com/css/css3_buttons.asp */
+#yukari {
+  background-color: rgb(0,192,0);
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 12px;
+  position: fixed;
+  text-decoration: none;
+  bottom: 10px; 
+  right: 10px;
+}
+#yukari:hover {
+  background-color: red;
+  color: white;
+}
+
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+
+.slideshow-container {
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  margin-top: -22px;
+  color: white;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+</style>
+</head>
+<body>
+
+<div class="ust" id="top">
+  <img src="logo.png" alt="logo" />
+</div>
+
+<div class="menu">
+  <a href="index.html">Anasayfa</a>
+
+  <div class="acilan">
+    <button class="ac">Çalışmalarım 
+    </button>
+    <div class="acilan-alt">
+      <a href="testotomasyon.html" target="_blank">Test Değerlendirme Otomasyonu</a>
+      <a href="veri.html" target="_blank">Veri Bilimi ve Görselleştirme</a>
+      <a href="e-ticaret.html" target="_blank">Makine Öğrenmesi E-Ticareti Nasıl Şekillendiriyor?</a>
+    </div>
+  </div>
+  
+<div class="acilan">
+    <button class="ac">ML Algoritmaları
+    </button>
+    <div class="acilan-alt">
+      <a href="Makine.html" target="_blank">Makine Öğrenmesi</a>
+      <a href="Makine2.html" target="_blank">Algoritmalar - 1</a>
+      <a href="Makine3.html" target="_blank">Algoritmalar - 2</a>
+    </div>
+  </div>
+
+  <div class="acilan">
+    <button class="ac">Tanıtımlar 
+    </button>
+    <div class="acilan-alt">
+      <a href="video1.html" target="_blank">Kocaeli Üniversitesi - KOÜ</a>
+      <a href="video2.html" target="_blank">Bilişim Sistemleri Mühendisliği</a>
+      <a href="video3.html" target="_blank">Kaggle Nedir ?</a>
+    </div>
+  </div>
+
+  <div class="">
+    <a href="iletisim.html" target="_blank">İletişim</a>
+  </div>
+
+  <div class="acilan">
+    <a href="Yusuf_Cv.pdf" target="_blank">Hakkımda</a>
+  </div>
+</div>
+
+<div class="govde">
+  <div class="yan">
+    <h1>Hakkımda</h1>
+    <p>Python, C++ programlama dillerinde deneyimliyim. Ayrıca temel Java ve temel web geliştirme bilgisine sahibim. Python’da Numpy, Pandas, Matplotlib kütüphanelerine hakimim. Bu aralar hem derslerim hem de kişisel olarak veri tabanı ve veri görselleştirmesi ile uğraşıyorum. Yapay zekaya büyük bir ilgi duyuyorum ve bu konuda uzmanlaşmak istiyorum. </p>
+
+    <br>
+
+    <h3>Yabancı Dil Bilgisi</h3>
+    <p><b>İngilizce </b> <br>
+      <ul>
+        <li>Okuma: İyi</li>
+        <li>Yazma: Orta</li>
+        <li>Konuşma: Orta</li>
+        <li>Dinleme: Orta</li>
+      </ul>
+
+    <br>
+
+    <h3>Hobiler</h3>
+     <p>Amatör olarak çizim yapıyorum.<br>
+      Kısa hikaye yazmak. <br>
+      Kitap okumak. <br>
+</p>
+
+    <br>
+
+    <h3>Eğitim Bilgileri</h3>
+    <p><b>Üniversite</b> <br>Kocaeli Üniversitesi / Bilişim Sistemleri Mühendisliği<br>
+    09/2017 - Devam Ediyor</p>
+	<p><b>Lise</b> <br>Gazi Anadolu Lisesi <br> 09/2011 - 06/2015 </p>
+
+  </div>
+  <div class="ana">
+
+    <!-- https://www.w3schools.com/w3css/w3css_slideshow.asp -->
+  	<div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 4</div>
+        <img src="asdasd.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 4</div>
+        <img src="makine-ogrenmesi-1.jpg" style="width:100%;">
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 4</div>
+        <img src="magg4-veri-bilimi-101.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">4 / 4</div>
+        <img src="ghj.jpg" style="width:100%">
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <br>
+    <h1>Haberler</h1>
+
+    <center><h2>Uygulamacıların Gözü Google’da</h2></center>
+    <div>
+      <center>
+        <img src="haber1.jpg" width="70%" height="300px" />
+      </center>
+    </div>
+    <p>Rekabet Kurumu ile Google arasındaki ‘android işletim sistemi’ görüşmeleri mobil cihaz üreticileri ve tüketiciler kadar, uygulama geliştiricileri tarafından da yakından izleniyor. Google’ın yeni modellerde kendi işletim sisteminin kullanılmasına izin vermeme kararı hayata geçerse android cihaz satışlarının düşmesinin yanında bankalardan, e-ticaret sitelerine kadar pek çok kurum ve uygulamanın da verdiği hizmetler aksayacak.</p>
+    <p>Haber kaynağı için <a href="http://www.hurriyet.com.tr/ekonomi/uygulamacilarin-gozu-googleda-41399059" target="_blank" style="color: black">tıklayın.</a></p>
+    <h5>Aralık 17, 2019</h5>
+    <br>
+
+        <center><h2>İngiltere'de Seçim Gecesi 700 Haberi Yapay Zeka Yazdı</h2></center>
+    <div>
+      <center>
+        <img src="haber2.jpg" width="70%" height="300px" />
+      </center>
+    </div>
+    <p>Muhafazakarlar için tarihi bir galibiyetle sonuçlanan İngiltere'deki genel seçimler, gazetecilik ve teknoloji açısından da tarihe geçti.<br><br>
+
+İngiltere Devlet Yayın Kuruluşu BBC, genel seçimlerde sonuçların açıklandığı her bölge için, bilgisayar tarafından yazılan ayrı bir haber yayınladıklarını açıkladı. Yapay Zeka'nın İngilizce ve Galce olarak yazdığı haberler, yayımlanmadan önce bir editör tarafından kontrol edildi.<br><br>
+
+Yaklaşık 700 haberde, hangi bölgede kimin önde olduğu ve sandıkların ne kadarının açıldığı gibi bilgilere yer verildi. Geçmiş dönemlerdeki oy oranları karşılaştırıldı.<br><br>
+
+Proje yetkilileri, fazla veri akışı sebebiyle bu haberlerin insanlar tarafından yazılmasının imkansız olduğuna vurgu yapıyor.
+Uzmanlar ise sistemin insanların yerini alması için değil haber akışının zenginleştirilmesi için tasarlandığı söylüyor.
+Uzmanların öne sürdükleri gerekçe ise bilgisayar sadece sayısal veriler üzerinden haber yazabiliyor.
+Yapay Zeka 2014'ten beri dünya çapında özellikle spor ve ekonomi verilerinin haberleştirilmesinde kullanılıyor.  <br><br>
+
+Araştırmacılar, yapay zekanın şimdilik yorum ya da değerlendirme yapamadığının altını çiziyor.
+Uzmanlar "insan yaratıcılığının" henüz robotlar tarafından taklit edilemediğine vurgu yapıyor.</p>
+    <p>Haber kaynağı için <a href="https://www.ntv.com.tr/teknoloji/ingilterede-secim-gecesi-700-haberi-yapay-zeka-yazdi,Uma1171VjUGQwsD4KOinEw" target="_blank" style="color: black">tıklayın.</a></p>
+    <h5>Aralık 17, 2019</h5>
+    <br>
+
+        <center><h2>Türk Doktordan Yapay Zekayla Kanseri Yakalayan Teknoloji</h2></center>
+    <div>
+      <center>
+        <img src="haber3.jpg" width="70%" height="300px" />
+      </center>
+    </div>
+    <p>Almanya’nın Münih kentinde faaliyet gösteren ve yöneticiliğini Dr. Ali Ertürk’ün yaptığı Helmholtz Merkezi Doku Mühendisliği ve Rejeneratif Tıp Enstitüsü, en küçük kanser hücrelerinin tespitini sağlayan DeepMACT adında yeni derin öğrenme tabanlı algoritma geliştirdi. Tamamen şeffaflaştırılan doku veya denekte, yapay zeka ile en küçük kanser hücresinin tespitini yapabilen sistem, kanser ve kanser ilaçları araştırma ve geliştirmeleri için büyük bir umut niteliğinde.<br><br>
+    DeepMACT algoritması, metastazları manuel olarak yapılan tespit yönteminden 300 kat daha hızlı biçimde yapabiliyor. DeepMACT teknolojisi ile aylarca süren tespit çalışması saniyeler içinde çok daha detaylı ve doğru bir biçimde tamamlanabiliyor.<br><br>
+    Dr. Ali Ertürk, ekibi ile geliştirdiği DeepMACT görüntüleme teknolojisi hakkında bilgi verdi.</p>
+    <p>Haber kaynağı için <a href="file:///C:/Users/Ulas/Desktop/Web%20Tasar%C4%B1m%20Proje/171307070.html#home" target="_blank" style="color: black">tıklayın.</a></p>
+    <h5>Aralık 17, 2019</h5>
+    <br>
+    <hr>
+    <br>
+    
+    <h1>Duyurular</h1>
+
+    <center><h3>Steam Yıl Başı İndirimleri</h3></center>
+    <p>Oyuncuların yıllardır vazgeçemediği platform olan Steam, yıl içinde sunduğu birçok indirim fırsatıyla vazgeçilecek gibi durmuyor. Yayıncılara özel indirimlerin yanı sıra Steam’in en beklenilen indirimleri yıllık olarak düzenlenen indirimler. Bu tarihlerde Steam’deki birçok oyun, yeni çıkmış olsun yada olmasın, büyük oranda indirime giriyor.<br>Kış İndirimleri: 19 Aralık - 2 Ocak</p>
+    <h5>Aralık 17, 2019</h5>
+    <br>
+    
+     <center><h3>Tesla Cybertruck fiyatı ne kadar?</h3></center>
+    <p>Tesla Cybertruck tanıtımı geçtiğimiz ay Elon Musk tarafından yapılmıştı. Tesla'nın elektrikli pick-up Cybertruck'ın özellikleri teknoloji ve araba tutkunlarının dikkatini çekmişti. <br><br> Elektrikli araç üreticisi Tesla'nın ilk pick-up modeli Cybertruck'ın, tanıtımının üzerinden bir hafta geçmeden 200 bin ön sipariş aldığı ortaya çıktı. <br><br>Başlangıç fiyatı ABD için 39 bin 900 dolar olarak açıklanan Cybertruck'a ön sipariş için, 100 dolarlık bir ödeme yapılması bekleniyor.</p>
+    <h5>Aralık 17, 2019</h5>
+    <br>
+    <br>
+    <br>
+  </div>
+</div>
+
+<footer class="footer">
+
+    <div class="footer-sol">
+    <h3>Sayfalar</h3>
+    <p class="footer-linkler">
+      <a href="#">Anasayfa</a><br />
+      <a href="#">Çalışmalarım</a><br />
+      <a href="#">ML Algoritmaları</a><br />
+      <a href="#">Tanıtımlar</a><br />
+      <a href="#">İletişim</a><br />
+      <a href="#">Hakkımda</a>
+    </p>
+    </div>
+ 
+    <div class="footer-orta">
+      <h3>İletişim</h3>
+      <p>Yusuf Ulaş Dağ</p>
+      <p>Kocaeli, Türkiye</p>
+      <p>0553 760 4147</p>
+      <p>yusufulasdag@gmail.com</p>
+      <p>yusufulasd@gmail.com</p>
+    </div>
+ 
+    <div class="footer-sag">
+      <div class="footer-ikonlar">
+        <h3>Sosyal Medya</h3>
+          <a href="https://tr-tr.facebook.com/" target="_blank"><img src="facebook.png" alt="facebook" /></a>
+          <a href="https://twitter.com/login?lang=tr" target="_blank"><img src="twitter.png" alt="facebook" /></a>
+          <a href="https://github.com/" target="_blank"><img src="github.png" alt="facebook" /></a>
+          <a href="https://www.kaggle.com/bezmenulas" target="_blank"><img src="k_30px.png" alt="kaggle" /></a>
+      </div> 
+    </div>
+  <hr>
+    <p style="color: white;">&copy; 2019, tüm hakları saklıdır. </p>
+</footer>
+
+<div>
+  <a href="#top" id="yukari"> <img src="up_40px.png" alt="up" height="20px" width="20px" /> </a>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  slides[slideIndex-1].style.display = "block";  
+}
+</script>
+
+
+</body>
+</html>

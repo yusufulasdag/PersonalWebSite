@@ -1,0 +1,34 @@
+-----TASARIM
+
+https://www.w3schools.com/howto/howto_make_a_website.asp
+
+---- Footer
+
+https://webdevtrick.com/html-css-footer/
+https://www.r10.net/php/1389556-hazir-footer-tasarimi.html
+
+----- Menu
+
+https://fatihhayrioglu.com/css-ile-menu-yapmak-iv-yatay-acilir-menuler/
+
+
+------ Mail Gönderme
+https://formspree.io/
+
+http://webcesi.com/web-tasarim/html-mail-gonderme/
+
+
+------ Media code
+https://www.w3schools.com/cssref/css3_pr_mediaquery.asp
+
+http://minimalcoding.net/blog/css-responsive-media-query-nedir-nasil-kullanilir/
+
+https://internetingishard.com/html-and-css/responsive-design/
+
+
+------ Slider
+https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp
+
+
+------- READ MORE
+https://www.w3schools.com/howto/howto_js_read_more.asp
